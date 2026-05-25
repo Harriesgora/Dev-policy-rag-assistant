@@ -1,0 +1,3 @@
+New software requests must be submitted through the internal approval portal.
+
+Security review is required before installation.
