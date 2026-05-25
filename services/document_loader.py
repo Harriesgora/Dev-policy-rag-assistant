@@ -3,6 +3,7 @@
 # Path helps us work with folders and files more easily
 from pathlib import Path
 
+# This function loads all documents from the documents directory
 def load_documents(): 
     documents_folder = Path("documents")
     loaded_documents = []
@@ -19,7 +20,8 @@ def load_documents():
 
         return loaded_documents
     
-    # function that is responsible for splitting documents into smaller chunks
+# function that is responsible for splitting documents into smaller chunks
+# This helps make the documents more manageable for processing
 def chunk_documents(documents):
         chunks = []
 
@@ -32,6 +34,7 @@ def chunk_documents(documents):
 
             for index, section in enumerate(text_sections):
                 clean_section = section.strip()
+                # Each section gets its own unique chunk ID within the document
 
                 # We only add the section to the chunks list if it's not empty after stripping whitespace
                 if clean_section:
