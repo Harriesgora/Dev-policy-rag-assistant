@@ -1,6 +1,4 @@
-﻿# Imports Path from Python's pathlib module
-
-# Path helps us work with folders and files more easily
+﻿# Path helps us work with folders and files more easily
 from pathlib import Path
 
 # This function loads all documents from the documents directory
@@ -10,7 +8,6 @@ def load_documents():
 
     # Loops through every .txt file inside the documents folder
     for file_path in documents_folder.glob("*.*"):
-        # Read the file contents into memory as a single string
         document_text = file_path.read_text()
         
         # We add the document's name and its text to the loaded_documents list as a dictionary
@@ -21,10 +18,9 @@ def load_documents():
         })
 
         # Return after first file (current behavior)
-        return loaded_documents
+    return loaded_documents
     
-# function that is responsible for splitting documents into smaller chunks
-# This helps make the documents more manageable for processing
+# function that is responsible for splitting documents into smaller chunks which helps make the documents more manageable for processing
 def chunk_documents(documents):
         chunks = []
 
@@ -39,7 +35,6 @@ def chunk_documents(documents):
             # Use the section index for a stable chunk id
             for index, section in enumerate(text_sections):
                 clean_section = section.strip()
-                # Each section gets its own unique chunk ID within the document
 
                 # We only add the section to the chunks list if it's not empty after stripping whitespace
                 if clean_section:
