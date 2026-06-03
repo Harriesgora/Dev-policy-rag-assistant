@@ -1,0 +1,3 @@
+Open-source software must be approved before use.
+
+Developers should check licence compatibility before adding dependencies.

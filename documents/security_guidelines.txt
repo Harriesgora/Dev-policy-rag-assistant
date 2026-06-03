@@ -1,0 +1,5 @@
+All developers must use multi-factor authentication.
+
+Passwords must be at least 12 characters long.
+
+Sensitive company data must not be shared externally.

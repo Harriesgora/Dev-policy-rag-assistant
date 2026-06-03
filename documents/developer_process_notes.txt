@@ -1,0 +1,3 @@
+All pull requests should be reviewed before merging into main.
+
+Developers should work on feature branches instead of directly on main.
