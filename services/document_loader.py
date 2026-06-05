@@ -1,5 +1,6 @@
 ﻿# Path helps us work with folders and files more easily
 from pathlib import Path
+from services.embedding_service import generate_embedding
 
 # This function loads all documents from the documents directory
 def load_documents(): 
@@ -42,7 +43,8 @@ def chunk_documents(documents):
                     chunks.append ({
                         "document_name": document_name,
                         "chunk_id": index + 1,
-                        "chunk_text": clean_section
+                        "chunk_text": clean_section, 
+                        "embedding": generate_embedding(clean_section)
                     })
 
         return chunks
